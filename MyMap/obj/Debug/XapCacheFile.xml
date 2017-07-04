@@ -1,0 +1,26 @@
+﻿<xapCache source="E:\work\vs\NCCBM\NCCBM\MyMap\Bin\Debug\MyMap.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2013/8/4 18:08:42">
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\obj\Debug\MyMap.dll" archivePath="MyMap.dll" lastWriteTime="2013/8/4 18:08:41" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll" archivePath="System.ComponentModel.DataAnnotations.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Data.Services.Client.dll" archivePath="System.Data.Services.Client.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.dll" archivePath="System.Windows.Controls.Data.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.Input.dll" archivePath="System.Windows.Controls.Data.Input.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\Bin\Debug\System.Windows.Controls.Input.Toolkit.dll" archivePath="System.Windows.Controls.Input.Toolkit.dll" lastWriteTime="2010/4/13 20:14:58" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Navigation.dll" archivePath="System.Windows.Controls.Navigation.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Data.dll" archivePath="System.Windows.Data.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Xml.Linq.dll" archivePath="System.Xml.Linq.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Xml.Serialization.dll" archivePath="System.Xml.Serialization.dll" lastWriteTime="2010/8/26 2:17:48" />
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\Bin\Debug\ZDIMS1.0.dll" archivePath="ZDIMS1.0.dll" lastWriteTime="2012/4/24 15:08:46" />
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\Bin\Debug\ZDIMSDemo.dll" archivePath="ZDIMSDemo.dll" lastWriteTime="2012/4/28 13:50:24" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.ComponentModel.DataAnnotations.resources.dll" archivePath="zh-Hans\System.ComponentModel.DataAnnotations.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Data.Services.Client.resources.dll" archivePath="zh-Hans\System.Data.Services.Client.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Windows.Controls.resources.dll" archivePath="zh-Hans\System.Windows.Controls.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Windows.Controls.Data.resources.dll" archivePath="zh-Hans\System.Windows.Controls.Data.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Windows.Controls.Data.Input.resources.dll" archivePath="zh-Hans\System.Windows.Controls.Data.Input.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Windows.Controls.Navigation.resources.dll" archivePath="zh-Hans\System.Windows.Controls.Navigation.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Windows.Data.resources.dll" archivePath="zh-Hans\System.Windows.Data.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Xml.Linq.resources.dll" archivePath="zh-Hans\System.Xml.Linq.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="c:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\zh-Hans\System.Xml.Serialization.resources.dll" archivePath="zh-Hans\System.Xml.Serialization.resources.dll" lastWriteTime="2010/8/26 5:33:36" />
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="2013/7/31 12:43:43" />
+  <file source="E:\work\vs\NCCBM\NCCBM\MyMap\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2013/7/31 12:46:24" />
+</xapCache>

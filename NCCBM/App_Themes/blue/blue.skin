@@ -1,0 +1,53 @@
+﻿<asp:GridView SkinId="Blue1"  runat="server" HorizontalAlign="left"  BackColor="Gray" BorderColor="#9EB6CE" BorderStyle="solid" BorderWidth="1px" CellPadding="3">
+    <RowStyle CssClass="Row" />
+    <SelectedRowStyle CssClass="SelectedRow" />
+    <EmptyDataRowStyle CssClass="EmptyDataRow" />
+    <EditRowStyle CssClass="EditRow" />
+    <HeaderStyle CssClass="HeaderRow" />
+    <AlternatingRowStyle CssClass="Row" />
+    <PagerStyle CssClass="PagerRow" />
+    <FooterStyle CssClass="Footer" />
+</asp:GridView>
+<asp:GridView SkinId="Blue2"  runat="server" HorizontalAlign="left" BorderColor="#9EB6CE" BorderStyle="solid" BorderWidth="1px" CellPadding="3">
+    <RowStyle CssClass="Row" />
+    <SelectedRowStyle CssClass="SelectedRow" />
+    <EmptyDataRowStyle CssClass="EmptyDataRow" />
+    <EditRowStyle CssClass="EditRow" />
+    <HeaderStyle CssClass="HeaderRow" />
+    <AlternatingRowStyle CssClass="AlternatingRow" />
+    <PagerStyle CssClass="PagerRow" />
+    <FooterStyle CssClass="Footer" />
+</asp:GridView>
+<asp:GridView SkinId="Blue3"  runat="server" HorizontalAlign="left"  BackColor="Gray" BorderColor="#9EB6CE" BorderStyle="solid" BorderWidth="1px" CellPadding="3">
+    <RowStyle CssClass="Row" />
+    <SelectedRowStyle CssClass="SelectedRow" />
+    <EmptyDataRowStyle CssClass="EmptyDataRow" />
+    <EditRowStyle CssClass="EditRow" />    
+    <AlternatingRowStyle CssClass="AlternatingRow" />
+    <PagerStyle CssClass="PagerRow" />
+    <FooterStyle CssClass="Footer" />
+</asp:GridView>
+<asp:GridView SkinId="BlueSheet" GridLines="Both" BorderColor="Black" BorderStyle="solid" BorderWidth="1px"  runat="server"   HorizontalAlign="left"  >
+    <RowStyle CssClass="SheetRow" />
+    <SelectedRowStyle CssClass="SelectedRow" />
+    <EmptyDataRowStyle CssClass="EmptyDataRow" />
+    <EditRowStyle CssClass="EditRow" />
+    <HeaderStyle CssClass="SheetHeaderRow" />
+    <AlternatingRowStyle CssClass="SheetAlternatingRow" />
+    <PagerStyle CssClass="SheetPagerRow" />
+    <FooterStyle CssClass="Footer" />
+</asp:GridView>
+              
+    
+<asp:DataList SkinId="BlueDL" runat="server" HorizontalAlign="left" BackColor="Gray" BorderColor="#9EB6CE" BorderStyle="solid" BorderWidth="1px" CellPadding="3" CellSpacing="2">    
+    <ItemStyle CssClass="Row" />
+    <SelectedItemStyle CssClass="SelectedRow" />
+    <HeaderStyle CssClass="HeaderRow" />
+    <FooterStyle CssClass="Footer" />
+</asp:DataList>
+
+<asp:ListBox runat="server" BackColor="Gray">
+    <asp:ListItem>1</asp:ListItem>
+    <asp:ListItem>2</asp:ListItem>
+    <asp:ListItem>3</asp:ListItem>
+</asp:ListBox>

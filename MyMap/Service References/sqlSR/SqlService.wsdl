@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sqlExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sqlExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sqlExecuteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertJing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertJingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getJingInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jinghao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getJingInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getJingInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecord2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecord2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRecord2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecord4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecord4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRecord4Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readExcel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xls" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sheet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readExcelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readExcelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRecordResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getLayers">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLayersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLayersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZuanjingInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jinghao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZuanjingInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getZuanjingInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYalieInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYalieInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getYalieInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="sqlExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:sqlExecute" />
+  </wsdl:message>
+  <wsdl:message name="sqlExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:sqlExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertJingSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertJing" />
+  </wsdl:message>
+  <wsdl:message name="InsertJingSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertJingResponse" />
+  </wsdl:message>
+  <wsdl:message name="getJingInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getJingInfo" />
+  </wsdl:message>
+  <wsdl:message name="getJingInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getJingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecord2SoapIn">
+    <wsdl:part name="parameters" element="tns:getRecord2" />
+  </wsdl:message>
+  <wsdl:message name="getRecord2SoapOut">
+    <wsdl:part name="parameters" element="tns:getRecord2Response" />
+  </wsdl:message>
+  <wsdl:message name="getRecord4SoapIn">
+    <wsdl:part name="parameters" element="tns:getRecord4" />
+  </wsdl:message>
+  <wsdl:message name="getRecord4SoapOut">
+    <wsdl:part name="parameters" element="tns:getRecord4Response" />
+  </wsdl:message>
+  <wsdl:message name="readExcelSoapIn">
+    <wsdl:part name="parameters" element="tns:readExcel" />
+  </wsdl:message>
+  <wsdl:message name="readExcelSoapOut">
+    <wsdl:part name="parameters" element="tns:readExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:getRecord" />
+  </wsdl:message>
+  <wsdl:message name="getRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:getRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLayersSoapIn">
+    <wsdl:part name="parameters" element="tns:getLayers" />
+  </wsdl:message>
+  <wsdl:message name="getLayersSoapOut">
+    <wsdl:part name="parameters" element="tns:getLayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZuanjingInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getZuanjingInfo" />
+  </wsdl:message>
+  <wsdl:message name="getZuanjingInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getZuanjingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getYalieInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getYalieInfo" />
+  </wsdl:message>
+  <wsdl:message name="getYalieInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getYalieInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SqlServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sqlExecute">
+      <wsdl:input message="tns:sqlExecuteSoapIn" />
+      <wsdl:output message="tns:sqlExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJing">
+      <wsdl:input message="tns:InsertJingSoapIn" />
+      <wsdl:output message="tns:InsertJingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getJingInfo">
+      <wsdl:input message="tns:getJingInfoSoapIn" />
+      <wsdl:output message="tns:getJingInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecord2">
+      <wsdl:input message="tns:getRecord2SoapIn" />
+      <wsdl:output message="tns:getRecord2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecord4">
+      <wsdl:input message="tns:getRecord4SoapIn" />
+      <wsdl:output message="tns:getRecord4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readExcel">
+      <wsdl:input message="tns:readExcelSoapIn" />
+      <wsdl:output message="tns:readExcelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecord">
+      <wsdl:input message="tns:getRecordSoapIn" />
+      <wsdl:output message="tns:getRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLayers">
+      <wsdl:input message="tns:getLayersSoapIn" />
+      <wsdl:output message="tns:getLayersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getZuanjingInfo">
+      <wsdl:input message="tns:getZuanjingInfoSoapIn" />
+      <wsdl:output message="tns:getZuanjingInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getYalieInfo">
+      <wsdl:input message="tns:getYalieInfoSoapIn" />
+      <wsdl:output message="tns:getYalieInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SqlServiceSoap" type="tns:SqlServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sqlExecute">
+      <soap:operation soapAction="http://tempuri.org/sqlExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJing">
+      <soap:operation soapAction="http://tempuri.org/InsertJing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJingInfo">
+      <soap:operation soapAction="http://tempuri.org/getJingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord2">
+      <soap:operation soapAction="http://tempuri.org/getRecord2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord4">
+      <soap:operation soapAction="http://tempuri.org/getRecord4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readExcel">
+      <soap:operation soapAction="http://tempuri.org/readExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord">
+      <soap:operation soapAction="http://tempuri.org/getRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLayers">
+      <soap:operation soapAction="http://tempuri.org/getLayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZuanjingInfo">
+      <soap:operation soapAction="http://tempuri.org/getZuanjingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYalieInfo">
+      <soap:operation soapAction="http://tempuri.org/getYalieInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SqlServiceSoap12" type="tns:SqlServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sqlExecute">
+      <soap12:operation soapAction="http://tempuri.org/sqlExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJing">
+      <soap12:operation soapAction="http://tempuri.org/InsertJing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJingInfo">
+      <soap12:operation soapAction="http://tempuri.org/getJingInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord2">
+      <soap12:operation soapAction="http://tempuri.org/getRecord2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord4">
+      <soap12:operation soapAction="http://tempuri.org/getRecord4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readExcel">
+      <soap12:operation soapAction="http://tempuri.org/readExcel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecord">
+      <soap12:operation soapAction="http://tempuri.org/getRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLayers">
+      <soap12:operation soapAction="http://tempuri.org/getLayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZuanjingInfo">
+      <soap12:operation soapAction="http://tempuri.org/getZuanjingInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYalieInfo">
+      <soap12:operation soapAction="http://tempuri.org/getYalieInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SqlService">
+    <wsdl:port name="SqlServiceSoap" binding="tns:SqlServiceSoap">
+      <soap:address location="http://localhost:9999/SqlService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SqlServiceSoap12" binding="tns:SqlServiceSoap12">
+      <soap12:address location="http://localhost:9999/SqlService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,146 @@
+﻿<controls:ChildWindow x:Class="MyMap.ZuanjingInfo"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="300" 
+           Title="钻井明细" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="取消" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="确定" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <controls:TabControl Height="226" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="378">
+            <controls:TabItem Header="钻进" Name="tabItem1">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="189" HorizontalAlignment="Left" Name="dgZj" VerticalAlignment="Top" Width="366">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="序号" Binding="{Binding id}"/>
+                            <sdk:DataGridTextColumn Header="上报日期" Binding="{Binding riqi}"/>
+                            <sdk:DataGridTextColumn Header="负责监督" Binding="{Binding f1}"/>
+                            <sdk:DataGridTextColumn Header="队号" Binding="{Binding f2}"/>
+                            <sdk:DataGridTextColumn Header="井号" Binding="{Binding f3}"/>
+                            <sdk:DataGridTextColumn Header="开钻日期" Binding="{Binding f4}"/>
+                            <sdk:DataGridTextColumn Header="设计井深" Binding="{Binding f5}"/>
+                            <sdk:DataGridTextColumn Header="目前井深" Binding="{Binding f6}"/>
+                            <sdk:DataGridTextColumn Header="当日进尺" Binding="{Binding f7}"/>
+                            <sdk:DataGridTextColumn Header="工况" Binding="{Binding f8}"/>
+                            <sdk:DataGridTextColumn Header="密度" Binding="{Binding f9}"/>
+                            <sdk:DataGridTextColumn Header="粘度" Binding="{Binding f10}"/>
+                            <sdk:DataGridTextColumn Header="设计井斜" Binding="{Binding f11}"/>
+                            <sdk:DataGridTextColumn Header="实际井斜" Binding="{Binding f12}"/>
+                            <sdk:DataGridTextColumn Header="设计方位" Binding="{Binding f13}"/>
+                            <sdk:DataGridTextColumn Header="实际方位" Binding="{Binding f14}"/>
+                            <sdk:DataGridTextColumn Header="设计狗腿度" Binding="{Binding f15}"/>
+                            <sdk:DataGridTextColumn Header="实际狗腿度" Binding="{Binding f16}"/>
+                            <sdk:DataGridTextColumn Header="SHE情况" Binding="{Binding f17}"/>
+                            <sdk:DataGridTextColumn Header="复杂情况" Binding="{Binding f18}"/>
+                            <sdk:DataGridTextColumn Header="整改内容及措施" Binding="{Binding f19}"/>
+                            <sdk:DataGridTextColumn Header="备注" Binding="{Binding f20}"/>
+                            <sdk:DataGridTextColumn Header="检测方式" Binding="{Binding f21}"/>
+                            <sdk:DataGridTextColumn Header="区块" Binding="{Binding qukuai}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </controls:TabItem>
+            <controls:TabItem Header="下套管" Name="tabItem2">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="189" HorizontalAlignment="Left" Name="dgXtg" VerticalAlignment="Top" Width="366">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="序号" Binding="{Binding id}"/>
+                            <sdk:DataGridTextColumn Header="上报日期" Binding="{Binding riqi}"/>
+                            <sdk:DataGridTextColumn Header="负责监督" Binding="{Binding f1}"/>
+                            <sdk:DataGridTextColumn Header="队号" Binding="{Binding f2}"/>
+                            <sdk:DataGridTextColumn Header="井号" Binding="{Binding f3}"/>
+                            <sdk:DataGridTextColumn Header="完钻井深" Binding="{Binding f4}"/>
+                            <sdk:DataGridTextColumn Header="完钻日期" Binding="{Binding f5}"/>
+                            <sdk:DataGridTextColumn Header="套管下深" Binding="{Binding f6}"/>
+                            <sdk:DataGridTextColumn Header="钢级" Binding="{Binding f7}"/>
+                            <sdk:DataGridTextColumn Header="尺寸" Binding="{Binding f8}"/>
+                            <sdk:DataGridTextColumn Header="丝扣" Binding="{Binding f9}"/>
+                            <sdk:DataGridTextColumn Header="外观" Binding="{Binding f10}"/>
+                            <sdk:DataGridTextColumn Header="平均壁厚" Binding="{Binding f11}"/>
+                            <sdk:DataGridTextColumn Header="平均外径" Binding="{Binding f12}"/>
+                            <sdk:DataGridTextColumn Header="密封脂" Binding="{Binding f13}"/>
+                            <sdk:DataGridTextColumn Header="紧扣" Binding="{Binding f14}"/>
+                            <sdk:DataGridTextColumn Header="浮箍、浮鞋检查" Binding="{Binding f15}"/>
+                            <sdk:DataGridTextColumn Header="套管数据表是否按要求填写" Binding="{Binding f16}"/>
+                            <sdk:DataGridTextColumn Header="套管批次、编号是否与物资部出库单一致" Binding="{Binding f17}"/>
+                            <sdk:DataGridTextColumn Header="存在问题" Binding="{Binding f18}"/>
+                            <sdk:DataGridTextColumn Header="整改措施" Binding="{Binding f19}"/>
+                            <sdk:DataGridTextColumn Header="备注" Binding="{Binding f20}"/>
+                            <sdk:DataGridTextColumn Header="检测方式" Binding="{Binding f21}"/>
+                            <sdk:DataGridTextColumn Header="区块" Binding="{Binding qukuai}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </controls:TabItem>
+            <controls:TabItem Header="固井" Name="tabItem3">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="189" HorizontalAlignment="Left" Name="dgGj" VerticalAlignment="Top" Width="366">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="序号" Binding="{Binding id}"/>
+                            <sdk:DataGridTextColumn Header="上报日期" Binding="{Binding riqi}"/>
+                            <sdk:DataGridTextColumn Header="负责监督" Binding="{Binding f1}"/>
+                            <sdk:DataGridTextColumn Header="队号" Binding="{Binding f2}"/>
+                            <sdk:DataGridTextColumn Header="井号" Binding="{Binding f3}"/>
+                            <sdk:DataGridTextColumn Header="完钻井深" Binding="{Binding f4}"/>
+                            <sdk:DataGridTextColumn Header="施工日期" Binding="{Binding f5}"/>
+                            <sdk:DataGridTextColumn Header="设计水泥返高" Binding="{Binding f6}"/>
+                            <sdk:DataGridTextColumn Header="实际水泥返高" Binding="{Binding f7}"/>
+                            <sdk:DataGridTextColumn Header="设计水泥浆密度" Binding="{Binding f8}"/>
+                            <sdk:DataGridTextColumn Header="实际水泥浆密度" Binding="{Binding f9}"/>
+                            <sdk:DataGridTextColumn Header="设计水泥浆用量" Binding="{Binding f10}"/>
+                            <sdk:DataGridTextColumn Header="实际水泥浆用量" Binding="{Binding f11}"/>
+                            <sdk:DataGridTextColumn Header="设计水泥用量" Binding="{Binding f12}"/>
+                            <sdk:DataGridTextColumn Header="实际水泥用量" Binding="{Binding f13}"/>
+                            <sdk:DataGridTextColumn Header="设计顶替量" Binding="{Binding f14}"/>
+                            <sdk:DataGridTextColumn Header="实际顶替量" Binding="{Binding f15}"/>
+                            <sdk:DataGridTextColumn Header="设计碰压" Binding="{Binding f16}"/>
+                            <sdk:DataGridTextColumn Header="实际碰压" Binding="{Binding f17}"/>
+                            <sdk:DataGridTextColumn Header="存在问题" Binding="{Binding f18}"/>
+                            <sdk:DataGridTextColumn Header="复杂情况" Binding="{Binding f19}"/>
+                            <sdk:DataGridTextColumn Header="备注" Binding="{Binding f20}"/>
+                            <sdk:DataGridTextColumn Header="检测方式" Binding="{Binding f21}"/>
+                            <sdk:DataGridTextColumn Header="区块" Binding="{Binding qukuai}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </controls:TabItem>
+            <controls:TabItem Header="完井" Name="tabItem4">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="189" HorizontalAlignment="Left" Name="dgWj" VerticalAlignment="Top" Width="366">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="序号" Binding="{Binding id}"/>
+                            <sdk:DataGridTextColumn Header="上报日期" Binding="{Binding riqi}"/>
+                            <sdk:DataGridTextColumn Header="负责监督" Binding="{Binding f1}"/>
+                            <sdk:DataGridTextColumn Header="队号" Binding="{Binding f2}"/>
+                            <sdk:DataGridTextColumn Header="井号" Binding="{Binding f3}"/>
+                            <sdk:DataGridTextColumn Header="设计标志管位置" Binding="{Binding f4}"/>
+                            <sdk:DataGridTextColumn Header="实际标志管位置" Binding="{Binding f5}"/>
+                            <sdk:DataGridTextColumn Header="设计人工井底" Binding="{Binding f6}"/>
+                            <sdk:DataGridTextColumn Header="实际人工井底" Binding="{Binding f7}"/>
+                            <sdk:DataGridTextColumn Header="固井质量-CBL" Binding="{Binding f8}"/>
+                            <sdk:DataGridTextColumn Header="固井质量-VDL" Binding="{Binding f9}"/>
+                            <sdk:DataGridTextColumn Header="水平产套偏差" Binding="{Binding f10}"/>
+                            <sdk:DataGridTextColumn Header="垂直产套偏差" Binding="{Binding f11}"/>
+                            <sdk:DataGridTextColumn Header="开始试压" Binding="{Binding f12}"/>
+                            <sdk:DataGridTextColumn Header="结束试压" Binding="{Binding f13}"/>
+                            <sdk:DataGridTextColumn Header="环形钢板焊接-上缘" Binding="{Binding f14}"/>
+                            <sdk:DataGridTextColumn Header="环形钢板焊接-下缘" Binding="{Binding f15}"/>
+                            <sdk:DataGridTextColumn Header="井口高度" Binding="{Binding f16}"/>
+                            <sdk:DataGridTextColumn Header="丝扣是否完好" Binding="{Binding f17}"/>
+                            <sdk:DataGridTextColumn Header="存在问题" Binding="{Binding f18}"/>
+                            <sdk:DataGridTextColumn Header="复杂情况" Binding="{Binding f19}"/>
+                            <sdk:DataGridTextColumn Header="备注" Binding="{Binding f20}"/>
+                            <sdk:DataGridTextColumn Header="检测方式" Binding="{Binding f21}"/>
+                            <sdk:DataGridTextColumn Header="区块" Binding="{Binding qukuai}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </controls:TabItem>
+        </controls:TabControl>
+    </Grid>
+</controls:ChildWindow>

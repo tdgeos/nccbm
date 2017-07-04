@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<root>
+	<maps>hancheng.Map;linfen.Map;xinzhou.Map</maps>
+  <hancheng>井位-2012;井位-2013</hancheng>
+	<linfen>井位-2012;井位-2013</linfen>
+	<xinzhou>井位-2012;井位-2013</xinzhou>
+	<symbolsize>100;1000;100</symbolsize>
+	<symbolid>37;41;42;43;44;48;130;73</symbolid>
+</root>

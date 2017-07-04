@@ -1,0 +1,75 @@
+﻿@import url("menu.css");
+@import url("jtcss.css");
+.title
+{    	
+    background-image: url(res/main-ad.png);
+	
+	background-repeat:no-repeat;
+	
+	border-radius:6px;
+	
+    height:105px;
+    
+    width:100%;
+    
+    text-align:left;
+    
+    margin-left:20px;
+    
+    margin-bottom:2px;
+    
+    
+}
+/* CSS Document */
+.arrowlistmenu { width: 120px;height:100%;text-align:center; /*width of accordion menu*/font:14.5px Arial;}
+.arrowlistmenu .menuheader { /*CSS class for menu headers in general (expanding or not!)*/ font:15px Arial;color:#000; background-image: url(res/titlebar.png);background-repeat:no-repeat; height:35px;margin-bottom:-8px;margin-top:0px;  /*bottom spacing between header and rest of content*/ text-transform: uppercase; padding:7px 0 0 0; /*header text is indented 10px*/ cursor: hand; cursor: pointer; }
+.arrowlistmenu .openheader { /*CSS class to apply to expandable header when it's expanded*/font:16px Arial; color:#0066ff;  background-image: url(res/titlebar-active.png); height:35px;}
+.arrowlistmenu ul { /*CSS for UL of each sub menu*/ list-style-type: none; margin: 0; padding: 0; margin-bottom:0; /*bottom spacing between each UL and rest of content*/ }
+.arrowlistmenu ul li { padding-bottom:0; /*bottom spacing between menu items*/ }
+.arrowlistmenu ul li a {text-align: left; color:#333;height:25px;background-image: url(res/arrowbullet.png);background-repeat: repeat-y; margin-top:0px; /*custom bullet list image*/ display: block; padding:5px 0 0 27px;  /*link text is indented 0px*/ text-decoration: none;  border-bottom: 0px solid #000; font-size: 95%;}
+.arrowlistmenu ul li a:visited {color:#333;}
+.arrowlistmenu ul li a:hover { /*hover state CSS*/font:15px Arial;color: #09f;}
+
+
+.ti
+{
+    width:120px;
+    height:35px;
+    background-color:white;
+    background-image: url(res/user-box.png);
+} 
+.arrowbucross
+{
+    width:120px;
+    height:1px;
+    background-image: url(res/arrowbucross.png);
+    margin-top:0px;
+} 
+
+img{ padding:0; border:0;overflow:hidden}
+
+
+/* div */
+#slidingBlock {
+    width:980px;
+    float:right;
+    margin-left:20px;
+}
+#slidingBlock h4 {
+    float:right;width:82px;height:36px;line-height:25px;text-align:center;font-size:18px;
+    margin-top:-35px;
+}
+#slidingBlock h4.menuNo {
+    font-weight:normal;color:#ffffff;
+}
+#slidingBlock h4.menuOn {
+    font-weight:bold;height:36px;color:#00ffff;background-image:url(res/slidingMenu.gif);background-repeat:repeat-x;
+    margin-top:-41px;
+}
+#slidingBlock DIV.slidingList_none {
+    display:none
+}
+#slidingBlock DIV.slidingList {
+    margin:0px;padding:5px;height:100%
+}
+

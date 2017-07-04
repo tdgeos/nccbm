@@ -1,0 +1,196 @@
+
+/* Site */
+body
+{
+    width:980px;
+    
+    height:620px;
+    
+    margin: 0 auto;
+    
+    font-size: small;
+    
+    text-align: left;
+    
+    overflow:auto;
+    
+    font-family:微软雅黑;
+    
+    background-position:top center;
+     
+    background-color:#fcfcfc;
+
+}
+
+/*一级菜单*/
+
+.navmenu_top *
+{
+	margin: 0;
+	padding: 0;
+	border-radius:4px;
+}
+.navmenu_top
+{
+	height: 36px;
+	background-image: url(res/bak.png);
+	background-repeat:repeat-X;
+	background-position:0px 0px;
+	width:100%;
+	border-radius:4px;
+	
+}
+.navmenu_top li
+{
+	/*水平菜单*/
+	float: left;
+	list-style: none;
+	position: relative;
+}
+.navmenu_top a
+{
+	display: block;
+	font-size: 16px;
+	font-weight:500;
+	height: 36px;
+	width: 100px;
+	line-height: 40px;
+	background-image: url(res/bak.jpg);
+	background-position:0px 0px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	
+}
+/*单独设置一级菜单样式*/0
+.navmenu_top > ul > li > a
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+.navmenu_top a:hover
+{
+	color: #fff;
+	background-position:0px -36px;
+} 
+.navmenu_top a:active
+{
+	color: #fff;
+	background-position:0px -72px;
+} 
+
+/*新增的二级菜单部分*/
+.navmenu_top ul ul
+{
+	visibility: hidden; /*开始时是隐藏的*/
+	position: absolute;
+	left: 0px;
+	top: 45px;
+}
+.navmenu_top ul li:hover ul, .navmenu_top ul a:hover ul
+{
+	visibility: visible;
+}
+.navmenu_top ul ul li
+{
+	clear: both; /*垂直显示*/
+	text-align: left;
+}
+/*选中菜单项*/
+.navmenu_top .selected
+{
+	padding-left:15px;
+	background-repeat: no-repeat;
+	text-decoration:underline;
+
+}
+
+
+.navmenu_left *
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.navmenu_left
+{
+	width: 120px;
+	background-color:white;
+}
+
+.navmenu_left .ti
+{
+    width:120px;
+    height:35px;
+    background-color:white;
+    background-image: url(res/user-box.png);
+} 
+
+.navmenu_left .content
+{
+   border:1px solid #79ABDE;width:118px;
+}  
+
+.navmenu_left li
+{
+	/*竖直菜单*/
+	list-style: none;
+	position: relative;
+	width: 116px;
+}
+
+.navmenu_left a
+{
+    margin:0px;padding:0px;
+	display: block;
+	font-size: 14px;
+	height: 40px;
+	width: 118px;
+	line-height: 40px;
+	background-color: #dedede;
+	color: #396DA7;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+/*单独设置一级菜单样式*/
+.navmenu_left > ul > li > a
+{
+	font-size: 11px;
+	font-weight: bold;
+	color:#898989;
+}
+.navmenu_left a:hover
+{
+	background: #369;
+	color: #fff;
+}
+
+/*新增的二级菜单部分*/
+.navmenu_left ul ul
+{
+	position:absolute;
+	left:118px;
+	top:0px;
+	visibility: hidden; /*开始时是隐藏的*/
+}
+.navmenu_left ul li:hover ul, .navmenu_left ul a:hover ul
+{
+	visibility:visible;
+}
+.navmenu_left ul ul li
+{
+	clear: both; /*垂直显示*/
+	text-align: left;
+}
+/*选中菜单项*/
+.navmenu_left .selected
+{
+	padding-left:15px;
+	background-position-x:0px;
+	background-image: url(res/selected.gif);
+	background-repeat: no-repeat;
+	text-decoration:underline;
+}

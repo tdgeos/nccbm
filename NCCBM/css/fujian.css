@@ -1,0 +1,8 @@
+@import url("web.css");
+@import url("jtcss.css");
+html,body
+{
+    min-height:400px;
+    height: 100%;
+    overflow: auto;
+}

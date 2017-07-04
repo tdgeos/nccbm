@@ -1,0 +1,16 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="SqlServiceSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://11.128.1.15/SqlService.asmx" binding="basicHttpBinding"
+                bindingConfiguration="SqlServiceSoap" contract="sqlSR.SqlServiceSoap"
+                name="SqlServiceSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

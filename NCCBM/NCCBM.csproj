@@ -1,0 +1,1449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B17BC91D-A17B-48BC-A2E3-F83981324148}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCCBM</RootNamespace>
+    <AssemblyName>NCCBM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60501.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AJAXExtensionsToolbox, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="GCoalPrj, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GCoalPrj.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v8.2, Version=8.2.20082.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.Shared.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebDateChooser.v8.2, Version=8.2.20082.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.WebDateChooser.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptCommentStripper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\JavaScriptCommentStripper.dll</HintPath>
+    </Reference>
+    <Reference Include="MapgisWSClient, Version=2009.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MapgisWSClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Graph, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.6.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MR.Cdecl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MR.Cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="X1.Pager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\X1.Pager.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutus\aboutus.aspx" />
+    <Content Include="aboutus\help.aspx" />
+    <Content Include="App_Themes\blue\blue.skin" />
+    <Content Include="App_Themes\blue\StyleSheet.css" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AJAXExtensionsToolbox.dll" />
+    <Content Include="bin\GCoalPrj.dll" />
+    <Content Include="bin\Infragistics35.WebUI.Shared.v8.2.dll" />
+    <Content Include="bin\Infragistics35.WebUI.WebDateChooser.v8.2.dll" />
+    <Content Include="bin\JavaScriptCommentStripper.dll" />
+    <Content Include="bin\MapgisWSClient.dll" />
+    <Content Include="bin\Mono.Cecil.dll" />
+    <Content Include="bin\MR.Cdecl.dll" />
+    <Content Include="bin\NCCBM.dll" />
+    <Content Include="bin\NCCBM.pdb" />
+    <Content Include="bin\System.Web.Extensions.Design.dll" />
+    <Content Include="bin\System.Web.Extensions.dll" />
+    <Content Include="bin\X1.Pager.dll" />
+    <Content Include="ClientBin\MyMap9.xap" />
+    <Content Include="css\fujian.css" />
+    <Content Include="css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jquery-ui-1.8.20.custom.css" />
+    <Content Include="css\jtcss.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\res\1.GIF" />
+    <Content Include="css\res\2.GIF" />
+    <Content Include="css\res\3.png" />
+    <Content Include="css\res\4.png" />
+    <Content Include="css\res\5.png" />
+    <Content Include="css\res\6.png" />
+    <Content Include="css\res\ad.png" />
+    <Content Include="css\res\again.png" />
+    <Content Include="css\res\arrowbucross.png" />
+    <Content Include="css\res\arrowbullet.png" />
+    <Content Include="css\res\bak.png" />
+    <Content Include="css\res\bottom.jpg" />
+    <Content Include="css\res\button-system.png" />
+    <Content Include="css\res\button-xls.png" />
+    <Content Include="css\res\current.png" />
+    <Content Include="css\res\current2.png" />
+    <Content Include="css\res\erroricon.png" />
+    <Content Include="css\res\fourmenu.png" />
+    <Content Include="css\res\hztt.jpg" />
+    <Content Include="css\res\ico.png" />
+    <Content Include="css\res\log-bj.jpg" />
+    <Content Include="css\res\log.png" />
+    <Content Include="css\res\login-sprite.png" />
+    <Content Include="css\res\login.png" />
+    <Content Include="css\res\main-ad.jpg" />
+    <Content Include="css\res\main-bottom.jpg" />
+    <Content Include="css\res\return.png" />
+    <Content Include="css\res\submit-1.png" />
+    <Content Include="css\res\submit-2.png" />
+    <Content Include="css\res\titlebar-active.png" />
+    <Content Include="css\res\titlebar.png" />
+    <Content Include="css\res\user-box.png" />
+    <Content Include="css\skin.css" />
+    <Content Include="css\superTables.css" />
+    <Content Include="css\web.css" />
+    <Content Include="data\jichuxinxi\jichuxinxi_add.aspx" />
+    <Content Include="data\jichuxinxi\jichuxinxi_edit.aspx" />
+    <Content Include="data\jichuxinxi\jichuxinxi_list.aspx" />
+    <Content Include="data\Report\cljl\cljl_add.aspx" />
+    <Content Include="data\Report\cljl\cljl_edit.aspx" />
+    <Content Include="data\Report\cljl\cljl_list.aspx" />
+    <Content Include="data\Report\clys\clys_add.aspx" />
+    <Content Include="data\Report\clys\clys_edit.aspx" />
+    <Content Include="data\Report\clys\clys_list.aspx" />
+    <Content Include="data\Report\gjzy\gjzy_add.aspx" />
+    <Content Include="data\Report\gjzy\gjzy_edit.aspx" />
+    <Content Include="data\Report\gjzy\gjzy_list.aspx" />
+    <Content Include="data\Report\jsyj\jsyj_add.aspx" />
+    <Content Include="data\Report\jsyj\jsyj_edit.aspx" />
+    <Content Include="data\Report\jsyj\jsyj_list.aspx" />
+    <Content Include="data\Report\jszl\jszl_add.aspx" />
+    <Content Include="data\Report\jszl\jszl_edit.aspx" />
+    <Content Include="data\Report\jszl\jszl_list.aspx" />
+    <Content Include="data\Report\xtg\xtg_add.aspx" />
+    <Content Include="data\Report\xtg\xtg_edit.aspx" />
+    <Content Include="data\Report\xtg\xtg_list.aspx" />
+    <Content Include="data\Report\ykys\ykys_add.aspx" />
+    <Content Include="data\Report\ykys\ykys_edit.aspx" />
+    <Content Include="data\Report\ykys\ykys_list.aspx" />
+    <Content Include="data\Report\zgys\zgys_add.aspx" />
+    <Content Include="data\Report\zgys\zgys_edit.aspx" />
+    <Content Include="data\Report\zgys\zgys_list.aspx" />
+    <Content Include="data\yl\sbyysm\sbyysm_add.aspx" />
+    <Content Include="data\yl\sbyysm\sbyysm_edit.aspx" />
+    <Content Include="data\yl\sbyysm\sbyysm_list.aspx" />
+    <Content Include="data\yl\sk\sk_add.aspx" />
+    <Content Include="data\yl\sk\sk_edit.aspx" />
+    <Content Include="data\yl\sk\sk_list.aspx" />
+    <Content Include="data\yl\ylsg\ylsg_add.aspx" />
+    <Content Include="data\yl\ylsg\ylsg_edit.aspx" />
+    <Content Include="data\yl\ylsg\ylsg_list.aspx" />
+    <Content Include="data\yl\yqjc\yqjc_add.aspx" />
+    <Content Include="data\yl\yqjc\yqjc_edit.aspx" />
+    <Content Include="data\yl\yqjc\yqjc_list.aspx" />
+    <Content Include="data\zj\gj\gj_add.aspx" />
+    <Content Include="data\zj\gj\gj_edit.aspx" />
+    <Content Include="data\zj\gj\gj_list.aspx" />
+    <Content Include="data\zj\scjwjtjb\scjwjtjb_add.aspx" />
+    <Content Include="data\zj\scjwjtjb\scjwjtjb_edit.aspx" />
+    <Content Include="data\zj\scjwjtjb\scjwjtjb_list.aspx" />
+    <Content Include="data\zj\wj\wj_add.aspx" />
+    <Content Include="data\zj\wj\wj_edit.aspx" />
+    <Content Include="data\zj\wj\wj_list.aspx" />
+    <Content Include="data\zj\xtg\xtg_add.aspx" />
+    <Content Include="data\zj\xtg\xtg_edit.aspx" />
+    <Content Include="data\zj\xtg\xtg_list.aspx" />
+    <Content Include="data\zj\zj\zj_add.aspx" />
+    <Content Include="data\zj\zj\zj_edit.aspx" />
+    <Content Include="data\zj\zj\zj_list.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Fujian.aspx" />
+    <Content Include="FusionCharts\chart.aspx" />
+    <Content Include="FusionCharts\chartDbfx.aspx" />
+    <Content Include="FusionCharts\chartGjzy.aspx" />
+    <Content Include="FusionCharts\chartGkfx.aspx" />
+    <Content Include="FusionCharts\chartJlqk.aspx" />
+    <Content Include="FusionCharts\chartJszl.aspx" />
+    <Content Include="FusionCharts\chartKzys.aspx" />
+    <Content Include="FusionCharts\chartRjcl.aspx" />
+    <Content Include="FusionCharts\chartSgzl.aspx" />
+    <Content Include="FusionCharts\chartXtgzy.aspx" />
+    <Content Include="FusionCharts\chartYsqk.aspx" />
+    <Content Include="FusionCharts\FirstPage.aspx" />
+    <Content Include="FusionCharts\FusionCharts\Area2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Bar2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Bubble.swf" />
+    <Content Include="FusionCharts\FusionCharts\Column2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Column3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Doughnut2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Doughnut3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\FCExporter.swf" />
+    <Content Include="FusionCharts\FusionCharts\Funnel.swf" />
+    <Content Include="FusionCharts\FusionCharts\InverseMSArea.swf" />
+    <Content Include="FusionCharts\FusionCharts\InverseMSColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\InverseMSLine.swf" />
+    <Content Include="FusionCharts\FusionCharts\Line.swf" />
+    <Content Include="FusionCharts\FusionCharts\LogMSColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\LogMSLine.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSArea.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSBar2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSBar3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSColumn3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSColumn3DLineDY.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSColumnLine3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSCombi2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSCombi3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSCombiDY2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSLine.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSSpline.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSSplineArea.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSStackedColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\MSStackedColumn2DLineDY.swf" />
+    <Content Include="FusionCharts\FusionCharts\Pie2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Pie3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Pyramid.swf" />
+    <Content Include="FusionCharts\FusionCharts\Scatter.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollArea2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollCombi2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollCombiDY2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollLine2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\ScrollStackedColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\Spline.swf" />
+    <Content Include="FusionCharts\FusionCharts\SplineArea.swf" />
+    <Content Include="FusionCharts\FusionCharts\SSGrid.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedArea2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedBar2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedBar3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedColumn2D.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedColumn3D.swf" />
+    <Content Include="FusionCharts\FusionCharts\StackedColumn3DLineDY.swf" />
+    <Content Include="FusionCharts\images\btn_close.gif" />
+    <Content Include="FusionCharts\images\btn_stat.gif" />
+    <Content Include="FusionCharts\JS\FusionCharts.js" />
+    <Content Include="FusionCharts\JS\jquery-1.7.2.min.js" />
+    <Content Include="FusionCharts\JS\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="FusionCharts\JS\jquery-ui.zh-CN.js" />
+    <Content Include="FusionCharts\Tongji_Clls.aspx" />
+    <Content Include="FusionCharts\Tongji_Clys.aspx" />
+    <Content Include="FusionCharts\Tongji_dbfx.aspx" />
+    <Content Include="FusionCharts\Tongji_Gj.aspx" />
+    <Content Include="FusionCharts\Tongji_Gkfx.aspx" />
+    <Content Include="FusionCharts\Tongji_Jszl.aspx" />
+    <Content Include="FusionCharts\Tongji_Kzys.aspx" />
+    <Content Include="FusionCharts\Tongji_Rjcl.aspx" />
+    <Content Include="FusionCharts\Tongji_Sgzl.aspx" />
+    <Content Include="FusionCharts\Tongji_Xtg.aspx" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="FusionCharts\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="FusionCharts\ui-lightness\jquery-ui-1.8.20.custom.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Import\js\button.png" />
+    <Content Include="Import\js\cancel.png" />
+    <Content Include="Import\js\jquery-1.3.2.min.js" />
+    <Content Include="Import\js\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="Import\js\swfobject.js" />
+    <Content Include="Import\js\uploadify.css" />
+    <Content Include="Import\js\uploadify.js" />
+    <Content Include="Import\js\uploadify.swf" />
+    <Content Include="Import\YL_Import.aspx" />
+    <Content Include="Import\ZJ_Import.aspx" />
+    <Content Include="js\common.js" />
+    <Content Include="js\datetime.js" />
+    <Content Include="js\ddaccordion.js" />
+    <Content Include="js\DrawPie.js" />
+    <Content Include="js\jquery-1.3.1.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui-1.8.20.custom.min.js" />
+    <Content Include="js\jquery-ui.zh-CN.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.superTable.js" />
+    <Content Include="js\jquery.uploadify.2.1\button.png" />
+    <Content Include="js\jquery.uploadify.2.1\cancel.png" />
+    <Content Include="js\jquery.uploadify.2.1\default.css" />
+    <Content Include="js\jquery.uploadify.2.1\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery.uploadify.2.1\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="js\jquery.uploadify.2.1\swfobject.js" />
+    <Content Include="js\jquery.uploadify.2.1\uploadify.css" />
+    <Content Include="js\jquery.uploadify.2.1\uploadify.js" />
+    <Content Include="js\jquery.uploadify.2.1\uploadify.swf" />
+    <Content Include="js\list-1.js" />
+    <Content Include="js\list-2.js" />
+    <Content Include="js\list-3.js" />
+    <Content Include="js\list-4.js" />
+    <Content Include="js\medrawline.js" />
+    <Content Include="js\MyTreeView.js" />
+    <Content Include="js\Silverlight.js" />
+    <Content Include="js\superTables.js" />
+    <Content Include="js\time.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Menu\ActionControl.ascx" />
+    <Content Include="mapgis.aspx" />
+    <Content Include="MyPagerBar.ascx" />
+    <Content Include="NoLogin.aspx" />
+    <Content Include="null.htm" />
+    <Content Include="Query\rb\rbcx.aspx" />
+    <Content Include="Query\rb\xxxx.aspx" />
+    <Content Include="Query\yl\ylcx.aspx" />
+    <Content Include="Query\yl\ylmx.aspx" />
+    <Content Include="Query\yl\ylzdycx.aspx" />
+    <Content Include="Query\zj\export.aspx" />
+    <Content Include="Query\zj\wjcx.aspx" />
+    <Content Include="Query\zj\zdycx.aspx" />
+    <Content Include="rightmenu.aspx" />
+    <Content Include="SqlService.asmx" />
+    <Content Include="system\branch\branch_add.aspx" />
+    <Content Include="system\branch\branch_edit.aspx" />
+    <Content Include="system\branch\branch_list.aspx" />
+    <Content Include="system\data_log\datalog.aspx" />
+    <Content Include="system\duiwu\duiwu_add.aspx" />
+    <Content Include="system\duiwu\duiwu_edit.aspx" />
+    <Content Include="system\duiwu\duiwu_list.aspx" />
+    <Content Include="system\employee\employee_add.aspx" />
+    <Content Include="system\employee\employee_edit.aspx" />
+    <Content Include="system\employee\employee_list.aspx" />
+    <Content Include="system\func\func_add.aspx" />
+    <Content Include="system\func\func_edit.aspx" />
+    <Content Include="system\func\func_list.aspx" />
+    <Content Include="system\menumanage\authorityassign.aspx" />
+    <Content Include="system\menumanage\left_three_add.aspx" />
+    <Content Include="system\menumanage\left_three_edit.aspx" />
+    <Content Include="system\menumanage\left_three_list.aspx" />
+    <Content Include="system\menumanage\left_two_add.aspx" />
+    <Content Include="system\menumanage\left_two_edit.aspx" />
+    <Content Include="system\menumanage\left_two_list.aspx" />
+    <Content Include="system\menumanage\right_four_add.aspx" />
+    <Content Include="system\menumanage\right_four_edit.aspx" />
+    <Content Include="system\menumanage\right_four_list.aspx" />
+    <Content Include="system\menumanage\top_one_add.aspx" />
+    <Content Include="system\menumanage\top_one_edit.aspx" />
+    <Content Include="system\menumanage\top_one_list.aspx" />
+    <Content Include="system\qukuai\qukuai_add.aspx" />
+    <Content Include="system\qukuai\qukuai_edit.aspx" />
+    <Content Include="system\qukuai\qukuai_list.aspx" />
+    <Content Include="system\role\role_add.aspx" />
+    <Content Include="system\role\role_edit.aspx" />
+    <Content Include="system\role\role_list.aspx" />
+    <Content Include="system\user\user_add.aspx" />
+    <Content Include="system\user\user_edit.aspx" />
+    <Content Include="system\user\user_list.aspx" />
+    <Content Include="Jianbao\jianbao.aspx" />
+    <Content Include="Tools.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus\aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus\aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aboutus\help.aspx.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus\help.aspx.designer.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\DataBaseHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppCode\DBCONN.cs" />
+    <Compile Include="AppCode\DynamicUrl.cs" />
+    <Compile Include="AppCode\EXGridView.cs" />
+    <Compile Include="AppCode\MySettings.cs" />
+    <Compile Include="AppCode\MyTools.cs" />
+    <Compile Include="AppCode\USER_CHECK.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_add.aspx.cs">
+      <DependentUpon>jichuxinxi_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_add.aspx.designer.cs">
+      <DependentUpon>jichuxinxi_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_edit.aspx.cs">
+      <DependentUpon>jichuxinxi_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_edit.aspx.designer.cs">
+      <DependentUpon>jichuxinxi_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_list.aspx.cs">
+      <DependentUpon>jichuxinxi_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\jichuxinxi\jichuxinxi_list.aspx.designer.cs">
+      <DependentUpon>jichuxinxi_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_add.aspx.cs">
+      <DependentUpon>cljl_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_add.aspx.designer.cs">
+      <DependentUpon>cljl_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_edit.aspx.cs">
+      <DependentUpon>cljl_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_edit.aspx.designer.cs">
+      <DependentUpon>cljl_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_list.aspx.cs">
+      <DependentUpon>cljl_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\cljl\cljl_list.aspx.designer.cs">
+      <DependentUpon>cljl_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_add.aspx.cs">
+      <DependentUpon>clys_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_add.aspx.designer.cs">
+      <DependentUpon>clys_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_edit.aspx.cs">
+      <DependentUpon>clys_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_edit.aspx.designer.cs">
+      <DependentUpon>clys_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_list.aspx.cs">
+      <DependentUpon>clys_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\clys\clys_list.aspx.designer.cs">
+      <DependentUpon>clys_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_add.aspx.cs">
+      <DependentUpon>gjzy_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_add.aspx.designer.cs">
+      <DependentUpon>gjzy_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_edit.aspx.cs">
+      <DependentUpon>gjzy_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_edit.aspx.designer.cs">
+      <DependentUpon>gjzy_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_list.aspx.cs">
+      <DependentUpon>gjzy_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\gjzy\gjzy_list.aspx.designer.cs">
+      <DependentUpon>gjzy_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_add.aspx.cs">
+      <DependentUpon>jsyj_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_add.aspx.designer.cs">
+      <DependentUpon>jsyj_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_edit.aspx.cs">
+      <DependentUpon>jsyj_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_edit.aspx.designer.cs">
+      <DependentUpon>jsyj_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_list.aspx.cs">
+      <DependentUpon>jsyj_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jsyj\jsyj_list.aspx.designer.cs">
+      <DependentUpon>jsyj_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_add.aspx.cs">
+      <DependentUpon>jszl_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_add.aspx.designer.cs">
+      <DependentUpon>jszl_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_edit.aspx.cs">
+      <DependentUpon>jszl_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_edit.aspx.designer.cs">
+      <DependentUpon>jszl_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_list.aspx.cs">
+      <DependentUpon>jszl_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\jszl\jszl_list.aspx.designer.cs">
+      <DependentUpon>jszl_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_add.aspx.cs">
+      <DependentUpon>xtg_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_add.aspx.designer.cs">
+      <DependentUpon>xtg_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_edit.aspx.cs">
+      <DependentUpon>xtg_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_edit.aspx.designer.cs">
+      <DependentUpon>xtg_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_list.aspx.cs">
+      <DependentUpon>xtg_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\xtg\xtg_list.aspx.designer.cs">
+      <DependentUpon>xtg_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_add.aspx.cs">
+      <DependentUpon>ykys_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_add.aspx.designer.cs">
+      <DependentUpon>ykys_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_edit.aspx.cs">
+      <DependentUpon>ykys_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_edit.aspx.designer.cs">
+      <DependentUpon>ykys_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_list.aspx.cs">
+      <DependentUpon>ykys_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\ykys\ykys_list.aspx.designer.cs">
+      <DependentUpon>ykys_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_add.aspx.cs">
+      <DependentUpon>zgys_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_add.aspx.designer.cs">
+      <DependentUpon>zgys_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_edit.aspx.cs">
+      <DependentUpon>zgys_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_edit.aspx.designer.cs">
+      <DependentUpon>zgys_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_list.aspx.cs">
+      <DependentUpon>zgys_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\Report\zgys\zgys_list.aspx.designer.cs">
+      <DependentUpon>zgys_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_add.aspx.cs">
+      <DependentUpon>sbyysm_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_add.aspx.designer.cs">
+      <DependentUpon>sbyysm_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_edit.aspx.cs">
+      <DependentUpon>sbyysm_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_edit.aspx.designer.cs">
+      <DependentUpon>sbyysm_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_list.aspx.cs">
+      <DependentUpon>sbyysm_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sbyysm\sbyysm_list.aspx.designer.cs">
+      <DependentUpon>sbyysm_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_add.aspx.cs">
+      <DependentUpon>sk_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_add.aspx.designer.cs">
+      <DependentUpon>sk_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_edit.aspx.cs">
+      <DependentUpon>sk_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_edit.aspx.designer.cs">
+      <DependentUpon>sk_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_list.aspx.cs">
+      <DependentUpon>sk_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\sk\sk_list.aspx.designer.cs">
+      <DependentUpon>sk_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_add.aspx.cs">
+      <DependentUpon>ylsg_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_add.aspx.designer.cs">
+      <DependentUpon>ylsg_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_edit.aspx.cs">
+      <DependentUpon>ylsg_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_edit.aspx.designer.cs">
+      <DependentUpon>ylsg_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_list.aspx.cs">
+      <DependentUpon>ylsg_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\ylsg\ylsg_list.aspx.designer.cs">
+      <DependentUpon>ylsg_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_add.aspx.cs">
+      <DependentUpon>yqjc_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_add.aspx.designer.cs">
+      <DependentUpon>yqjc_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_edit.aspx.cs">
+      <DependentUpon>yqjc_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_edit.aspx.designer.cs">
+      <DependentUpon>yqjc_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_list.aspx.cs">
+      <DependentUpon>yqjc_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\yl\yqjc\yqjc_list.aspx.designer.cs">
+      <DependentUpon>yqjc_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_add.aspx.cs">
+      <DependentUpon>gj_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_add.aspx.designer.cs">
+      <DependentUpon>gj_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_edit.aspx.cs">
+      <DependentUpon>gj_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_edit.aspx.designer.cs">
+      <DependentUpon>gj_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_list.aspx.cs">
+      <DependentUpon>gj_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\gj\gj_list.aspx.designer.cs">
+      <DependentUpon>gj_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_add.aspx.cs">
+      <DependentUpon>scjwjtjb_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_add.aspx.designer.cs">
+      <DependentUpon>scjwjtjb_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_edit.aspx.cs">
+      <DependentUpon>scjwjtjb_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_edit.aspx.designer.cs">
+      <DependentUpon>scjwjtjb_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_list.aspx.cs">
+      <DependentUpon>scjwjtjb_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\scjwjtjb\scjwjtjb_list.aspx.designer.cs">
+      <DependentUpon>scjwjtjb_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_add.aspx.cs">
+      <DependentUpon>wj_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_add.aspx.designer.cs">
+      <DependentUpon>wj_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_edit.aspx.cs">
+      <DependentUpon>wj_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_edit.aspx.designer.cs">
+      <DependentUpon>wj_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_list.aspx.cs">
+      <DependentUpon>wj_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\wj\wj_list.aspx.designer.cs">
+      <DependentUpon>wj_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_add.aspx.cs">
+      <DependentUpon>xtg_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_add.aspx.designer.cs">
+      <DependentUpon>xtg_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_edit.aspx.cs">
+      <DependentUpon>xtg_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_edit.aspx.designer.cs">
+      <DependentUpon>xtg_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_list.aspx.cs">
+      <DependentUpon>xtg_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\xtg\xtg_list.aspx.designer.cs">
+      <DependentUpon>xtg_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_add.aspx.cs">
+      <DependentUpon>zj_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_add.aspx.designer.cs">
+      <DependentUpon>zj_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_edit.aspx.cs">
+      <DependentUpon>zj_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_edit.aspx.designer.cs">
+      <DependentUpon>zj_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_list.aspx.cs">
+      <DependentUpon>zj_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data\zj\zj\zj_list.aspx.designer.cs">
+      <DependentUpon>zj_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fujian.aspx.cs">
+      <DependentUpon>Fujian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fujian.aspx.designer.cs">
+      <DependentUpon>Fujian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chart.aspx.cs">
+      <DependentUpon>chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chart.aspx.designer.cs">
+      <DependentUpon>chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartDbfx.aspx.cs">
+      <DependentUpon>chartDbfx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartDbfx.aspx.designer.cs">
+      <DependentUpon>chartDbfx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartGjzy.aspx.cs">
+      <DependentUpon>chartGjzy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartGjzy.aspx.designer.cs">
+      <DependentUpon>chartGjzy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartGkfx.aspx.cs">
+      <DependentUpon>chartGkfx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartGkfx.aspx.designer.cs">
+      <DependentUpon>chartGkfx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartJlqk.aspx.cs">
+      <DependentUpon>chartJlqk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartJlqk.aspx.designer.cs">
+      <DependentUpon>chartJlqk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartJszl.aspx.cs">
+      <DependentUpon>chartJszl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartJszl.aspx.designer.cs">
+      <DependentUpon>chartJszl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartKzys.aspx.cs">
+      <DependentUpon>chartKzys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartKzys.aspx.designer.cs">
+      <DependentUpon>chartKzys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartRjcl.aspx.cs">
+      <DependentUpon>chartRjcl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartRjcl.aspx.designer.cs">
+      <DependentUpon>chartRjcl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartSgzl.aspx.cs">
+      <DependentUpon>chartSgzl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartSgzl.aspx.designer.cs">
+      <DependentUpon>chartSgzl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartXtgzy.aspx.cs">
+      <DependentUpon>chartXtgzy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartXtgzy.aspx.designer.cs">
+      <DependentUpon>chartXtgzy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\chartYsqk.aspx.cs">
+      <DependentUpon>chartYsqk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\chartYsqk.aspx.designer.cs">
+      <DependentUpon>chartYsqk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\FirstPage.aspx.cs">
+      <DependentUpon>FirstPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\FirstPage.aspx.designer.cs">
+      <DependentUpon>FirstPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Clls.aspx.cs">
+      <DependentUpon>Tongji_Clls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Clls.aspx.designer.cs">
+      <DependentUpon>Tongji_Clls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Clys.aspx.cs">
+      <DependentUpon>Tongji_Clys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Clys.aspx.designer.cs">
+      <DependentUpon>Tongji_Clys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_dbfx.aspx.cs">
+      <DependentUpon>Tongji_dbfx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_dbfx.aspx.designer.cs">
+      <DependentUpon>Tongji_dbfx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Gj.aspx.cs">
+      <DependentUpon>Tongji_Gj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Gj.aspx.designer.cs">
+      <DependentUpon>Tongji_Gj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Gkfx.aspx.cs">
+      <DependentUpon>Tongji_Gkfx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Gkfx.aspx.designer.cs">
+      <DependentUpon>Tongji_Gkfx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Jszl.aspx.cs">
+      <DependentUpon>Tongji_Jszl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Jszl.aspx.designer.cs">
+      <DependentUpon>Tongji_Jszl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Kzys.aspx.cs">
+      <DependentUpon>Tongji_Kzys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Kzys.aspx.designer.cs">
+      <DependentUpon>Tongji_Kzys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Rjcl.aspx.cs">
+      <DependentUpon>Tongji_Rjcl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Rjcl.aspx.designer.cs">
+      <DependentUpon>Tongji_Rjcl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Sgzl.aspx.cs">
+      <DependentUpon>Tongji_Sgzl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Sgzl.aspx.designer.cs">
+      <DependentUpon>Tongji_Sgzl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Xtg.aspx.cs">
+      <DependentUpon>Tongji_Xtg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionCharts\Tongji_Xtg.aspx.designer.cs">
+      <DependentUpon>Tongji_Xtg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Import\FujianHandler.ashx.cs">
+      <DependentUpon>FujianHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\TableImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Import\YL_Import.aspx.cs">
+      <DependentUpon>YL_Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\YL_Import.aspx.designer.cs">
+      <DependentUpon>YL_Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ZJ_Import.aspx.cs">
+      <DependentUpon>ZJ_Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\ZJ_Import.aspx.designer.cs">
+      <DependentUpon>ZJ_Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mapgis.aspx.cs">
+      <DependentUpon>mapgis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mapgis.aspx.designer.cs">
+      <DependentUpon>mapgis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ActionControl.ascx.cs">
+      <DependentUpon>ActionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\ActionControl.ascx.designer.cs">
+      <DependentUpon>ActionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuComposite .cs" />
+    <Compile Include="Menu\MenuCompositeItem.cs" />
+    <Compile Include="Menu\MuneItemHelper.cs" />
+    <Compile Include="MyPagerBar.ascx.cs">
+      <DependentUpon>MyPagerBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyPagerBar.ascx.designer.cs">
+      <DependentUpon>MyPagerBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\rb\rbcx.aspx.cs">
+      <DependentUpon>rbcx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\rb\rbcx.aspx.designer.cs">
+      <DependentUpon>rbcx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\rb\xxxx.aspx.cs">
+      <DependentUpon>xxxx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\rb\xxxx.aspx.designer.cs">
+      <DependentUpon>xxxx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\yl\ylcx.aspx.cs">
+      <DependentUpon>ylcx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\yl\ylcx.aspx.designer.cs">
+      <DependentUpon>ylcx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\yl\ylmx.aspx.cs">
+      <DependentUpon>ylmx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\yl\ylmx.aspx.designer.cs">
+      <DependentUpon>ylmx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\yl\ylzdycx.aspx.cs">
+      <DependentUpon>ylzdycx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\yl\ylzdycx.aspx.designer.cs">
+      <DependentUpon>ylzdycx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\zj\export.aspx.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\zj\export.aspx.designer.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\zj\wjcx.aspx.cs">
+      <DependentUpon>wjcx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\zj\wjcx.aspx.designer.cs">
+      <DependentUpon>wjcx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\zj\zdycx.aspx.cs">
+      <DependentUpon>zdycx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\zj\zdycx.aspx.designer.cs">
+      <DependentUpon>zdycx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rightmenu.aspx.cs">
+      <DependentUpon>rightmenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rightmenu.aspx.designer.cs">
+      <DependentUpon>rightmenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SilverlightUpload.ashx.cs">
+      <DependentUpon>SilverlightUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SqlService.asmx.cs">
+      <DependentUpon>SqlService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="system\branch\branch_add.aspx.cs">
+      <DependentUpon>branch_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\branch\branch_add.aspx.designer.cs">
+      <DependentUpon>branch_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\branch\branch_edit.aspx.cs">
+      <DependentUpon>branch_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\branch\branch_edit.aspx.designer.cs">
+      <DependentUpon>branch_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\branch\branch_list.aspx.cs">
+      <DependentUpon>branch_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\branch\branch_list.aspx.designer.cs">
+      <DependentUpon>branch_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\data_log\datalog.aspx.cs">
+      <DependentUpon>datalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\data_log\datalog.aspx.designer.cs">
+      <DependentUpon>datalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_add.aspx.cs">
+      <DependentUpon>duiwu_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_add.aspx.designer.cs">
+      <DependentUpon>duiwu_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_edit.aspx.cs">
+      <DependentUpon>duiwu_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_edit.aspx.designer.cs">
+      <DependentUpon>duiwu_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_list.aspx.cs">
+      <DependentUpon>duiwu_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\duiwu\duiwu_list.aspx.designer.cs">
+      <DependentUpon>duiwu_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\employee\employee_add.aspx.cs">
+      <DependentUpon>employee_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\employee\employee_add.aspx.designer.cs">
+      <DependentUpon>employee_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\employee\employee_edit.aspx.cs">
+      <DependentUpon>employee_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\employee\employee_edit.aspx.designer.cs">
+      <DependentUpon>employee_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\employee\employee_list.aspx.cs">
+      <DependentUpon>employee_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\employee\employee_list.aspx.designer.cs">
+      <DependentUpon>employee_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\func\func_add.aspx.cs">
+      <DependentUpon>func_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\func\func_add.aspx.designer.cs">
+      <DependentUpon>func_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\func\func_edit.aspx.cs">
+      <DependentUpon>func_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\func\func_edit.aspx.designer.cs">
+      <DependentUpon>func_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\func\func_list.aspx.cs">
+      <DependentUpon>func_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\func\func_list.aspx.designer.cs">
+      <DependentUpon>func_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\authorityassign.aspx.cs">
+      <DependentUpon>authorityassign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\authorityassign.aspx.designer.cs">
+      <DependentUpon>authorityassign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_add.aspx.cs">
+      <DependentUpon>left_three_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_add.aspx.designer.cs">
+      <DependentUpon>left_three_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_edit.aspx.cs">
+      <DependentUpon>left_three_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_edit.aspx.designer.cs">
+      <DependentUpon>left_three_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_list.aspx.cs">
+      <DependentUpon>left_three_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_three_list.aspx.designer.cs">
+      <DependentUpon>left_three_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_add.aspx.cs">
+      <DependentUpon>left_two_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_add.aspx.designer.cs">
+      <DependentUpon>left_two_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_edit.aspx.cs">
+      <DependentUpon>left_two_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_edit.aspx.designer.cs">
+      <DependentUpon>left_two_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_list.aspx.cs">
+      <DependentUpon>left_two_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\left_two_list.aspx.designer.cs">
+      <DependentUpon>left_two_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_add.aspx.cs">
+      <DependentUpon>right_four_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_add.aspx.designer.cs">
+      <DependentUpon>right_four_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_edit.aspx.cs">
+      <DependentUpon>right_four_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_edit.aspx.designer.cs">
+      <DependentUpon>right_four_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_list.aspx.cs">
+      <DependentUpon>right_four_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\right_four_list.aspx.designer.cs">
+      <DependentUpon>right_four_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_add.aspx.cs">
+      <DependentUpon>top_one_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_add.aspx.designer.cs">
+      <DependentUpon>top_one_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_edit.aspx.cs">
+      <DependentUpon>top_one_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_edit.aspx.designer.cs">
+      <DependentUpon>top_one_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_list.aspx.cs">
+      <DependentUpon>top_one_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\menumanage\top_one_list.aspx.designer.cs">
+      <DependentUpon>top_one_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_add.aspx.cs">
+      <DependentUpon>qukuai_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_add.aspx.designer.cs">
+      <DependentUpon>qukuai_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_edit.aspx.cs">
+      <DependentUpon>qukuai_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_edit.aspx.designer.cs">
+      <DependentUpon>qukuai_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_list.aspx.cs">
+      <DependentUpon>qukuai_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\qukuai\qukuai_list.aspx.designer.cs">
+      <DependentUpon>qukuai_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\role\role_add.aspx.cs">
+      <DependentUpon>role_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\role\role_add.aspx.designer.cs">
+      <DependentUpon>role_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\role\role_edit.aspx.cs">
+      <DependentUpon>role_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\role\role_edit.aspx.designer.cs">
+      <DependentUpon>role_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\role\role_list.aspx.cs">
+      <DependentUpon>role_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\role\role_list.aspx.designer.cs">
+      <DependentUpon>role_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\user\user_add.aspx.cs">
+      <DependentUpon>user_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\user\user_add.aspx.designer.cs">
+      <DependentUpon>user_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\user\user_edit.aspx.cs">
+      <DependentUpon>user_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\user\user_edit.aspx.designer.cs">
+      <DependentUpon>user_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\user\user_list.aspx.cs">
+      <DependentUpon>user_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\user\user_list.aspx.designer.cs">
+      <DependentUpon>user_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jianbao\jianbao.aspx.cs">
+      <DependentUpon>jianbao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jianbao\jianbao.aspx.designer.cs">
+      <DependentUpon>jianbao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.aspx.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools.aspx.designer.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Import\FujianHandler.ashx" />
+    <Content Include="SilverlightUpload.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9999</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
